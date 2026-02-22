@@ -1,0 +1,133 @@
+body {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 5px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-container img {
+    width: 150px; /* Ajusta el tamaño según la imagen */
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid white; /* Marco blanco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar imágenes en su contenedor */
+    gap: 10px; /* Espacio entre imágenes */
+}
+
+.image-container img:first-child {
+    margin-top: -30px; /* Mueve la primera imagen hacia arriba */
+}
+
+.image-container img:last-child {
+    margin-bottom: -30px; /* Mueve la segunda imagen hacia abajo */
+}
+
+
+.content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.5rem;
+    color: #ff4f7a;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    background: #ff4f7a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#no {
+    background: #444;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ff4f7a;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) { /* Para celulares */
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .dos {
+        padding-top: 1.5rem;
+    }
+
+    .image-container {
+        flex-direction: row; /* Las imágenes se colocan en línea */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .image-container img {
+        width: 120px; /* Reducir el tamaño en móviles */
+    }
+
+    .content {
+        max-width: 90%; /* Para que no quede muy ancho */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 300px) { /* Para pantallas muy pequeñas */
+
+    .image-container img {
+        width: 80px; /* Reducir un poco el tamaño en pantallas ultra pequeñas */
+    }
+}
+
+@media (max-width: 200px) { /* Para pantallas muy pequeñas */
+    .image-container {
+        flex-direction: column; /* Apilar imágenes en vertical */
+        align-items: center; /* Centrar imágenes */
+    }
+}
+
+
+
